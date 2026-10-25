@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-[#FAF8F5] text-[#1A1A1A] antialiased selection:bg-[#C8A26A]/20 selection:text-[#1A1A1A];
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Luxury Champagne Gold Foil Gradient */
+.gold-gradient {
+  background: linear-gradient(135deg, #c8a26a 0%, #ecd9ba 50%, #9e7a45 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #9e7a45 0%, #c8a26a 45%, #7a5c2d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-light {
+  background: linear-gradient(135deg, #ecd9ba 0%, #c8a26a 60%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-header {
+  background: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 227, 217, 0.8);
+}
+
+.dark-glass {
+  background: rgba(15, 15, 17, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle editorial marquee text */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Editorial subtle borders */
+.border-subtle {
+  border-color: #E8E3D9;
+}
+
+/* Custom aesthetic scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8A26A;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9E7A45;
+}
